@@ -6,6 +6,9 @@ export const QUERY = gql`
       id
       title
       content
+      user {
+        email
+      }
     }
   }
 `

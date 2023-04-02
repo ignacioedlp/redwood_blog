@@ -7,6 +7,10 @@ export const QUERY = gql`
       id
       title
       content
+      user {
+        name
+        email
+      }
     }
   }
 `
@@ -21,6 +25,6 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ articles }) => {
   return articles.map((item) => (
-    <Article article={item} key={item.id} />
+    <Article article={item} key={item.id} summary={true} />
   ))
 }

@@ -1,7 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags, useMutation } from '@redwoodjs/web'
 import { Form, Label, TextField, TextAreaField, Submit, FieldError, useForm, FormError } from '@redwoodjs/forms'
-import { Toaster, toast } from '@redwoodjs/web/toast'
+import { toast } from '@redwoodjs/web/toast'
 
 const CREATE_CONTACT = gql`
     mutation CreateContactMutation($input: CreateContactInput!) {
@@ -30,8 +30,6 @@ const ContactPage = () => {
   return (
     <>
       <MetaTags title="Contact" description="Contact page" />
-
-      <Toaster />
       <Form onSubmit={onSubmit} formMethods={formMethods} error={error}>
         <FormError error={error} wrapperClassName="rw-form-error-wrapper" titleClassName="rw-form-error-title" listClassName="rw-form-error-list" />
         <Label name="name" errorClassName="error">

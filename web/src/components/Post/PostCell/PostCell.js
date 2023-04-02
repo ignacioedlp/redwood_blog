@@ -2,13 +2,11 @@ import Post from 'src/components/Post/Post'
 
 export const QUERY = gql`
   query FindPostById($id: Int!) {
-    post: post(id: $id) {
+    post: adminPost(id: $id) {
       id
-      createdAt
-      updatedAt
       title
       content
-      published
+      createdAt
     }
   }
 `
