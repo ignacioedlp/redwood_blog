@@ -1,6 +1,7 @@
 
 import { Toaster } from '@redwoodjs/web/toast'
 import { useAuth } from 'src/auth'
+import Footer from 'src/components/Footer/Footer'
 import Navbar from 'src/components/Navbar'
 
 const BlogLayout = ({ children }) => {
@@ -18,6 +19,7 @@ const BlogLayout = ({ children }) => {
         />
       </header>
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

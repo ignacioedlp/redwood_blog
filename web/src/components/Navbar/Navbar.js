@@ -32,15 +32,15 @@ const Navbar = ({ isAuthenticated, currentUser, logOut }) => {
               </ul>
             </nav>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ">
               {!isAuthenticated ? (
                 <div className="sm:flex sm:gap-4">
-                  <div className="hidden sm:flex">
+                  <div className="hidden sm:flex shadow-md shadow-slate-400">
                     <Link to={routes.login()} className="rounded-md bg-[#222222] px-5 py-2.5 text-sm font-medium text-white shadow text-center"
                     >Login</Link>
                   </div>
 
-                  <div className="hidden sm:flex">
+                  <div className="hidden sm:flex shadow-md shadow-slate-400">
                     <Link
                       className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#222222] border-[#222222] border-2
                       "
@@ -51,7 +51,7 @@ const Navbar = ({ isAuthenticated, currentUser, logOut }) => {
                   </div>
                 </div>
               ) : (
-                <div className="sm:flex sm:gap-4">
+                <div className="sm:flex sm:gap-4 shadow-md shadow-slate-400">
                   <button
                     className="rounded-md bg-[#222222] px-5 py-2.5 text-sm font-medium text-white
                      shadow-2xl"
