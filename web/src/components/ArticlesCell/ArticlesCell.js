@@ -24,7 +24,14 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ articles }) => {
-  return articles.map((item) => (
-    <Article article={item} key={item.id} summary={true} />
-  ))
+
+  return (
+    <div className="flex flex-col flex-wrap items-center justify-center mt-16 gap-9 md:flex-row">
+      {
+        articles.map((item) => (
+          <Article article={item} key={item.id} summary={true} />
+        ))
+      }
+    </div>
+  )
 }
