@@ -6,10 +6,9 @@ const ArticlePage = ({ id }) => {
   return (
     <>
       <MetaTags title="Article" description="Article page" />
-
-      <ArticleCell id={id} />
-
-
+      <div className='p-10'>
+        <ArticleCell id={id} />
+      </div>
     </>
   )
 }

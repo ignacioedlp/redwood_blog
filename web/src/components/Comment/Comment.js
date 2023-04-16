@@ -36,7 +36,7 @@ const Comment = ({ comment }) => {
   }
 
   return (
-    <div className="bg-gray-200 p-8 rounded-lg relative">
+    <div className="w-full bg-white shadow-md shadow-slate-400 p-4 rounded-md relative">
       <header className="flex justify-between">
         <h2 className="font-semibold text-gray-700">{comment.name}</h2>
         <time className="text-xs text-gray-500" dateTime={comment.createdAt}>

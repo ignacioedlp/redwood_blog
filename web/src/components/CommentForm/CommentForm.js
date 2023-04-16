@@ -38,9 +38,8 @@ const CommentForm = ({ postId }) => {
   }
 
   return (
-    <div className={hasPosted ? 'hidden' : ''}>
-      <h3 className="font-light text-lg text-gray-600">Leave a Comment</h3>
-      <Form className="mt-4 w-full" onSubmit={onSubmit}>
+    <div className={hasPosted ? 'hidden' : 'w-full bg-white shadow-md shadow-slate-400 p-4 rounded-md'}>
+      <Form className="mt-4 w-full flex flex-col" onSubmit={onSubmit}>
         <FormError
           error={error}
           titleClassName="font-semibold"
@@ -48,33 +47,33 @@ const CommentForm = ({ postId }) => {
         />
         <Label
           name="name"
-          className="block text-xs font-semibold text-gray-500 uppercase"
+          className=" text-xs font-semibold text-gray-500 uppercase"
         >
           Name
         </Label>
         <TextField
           name="name"
-          className="block w-full p-1 border rounded text-sm "
+          className=" w-full p-1 border rounded text-sm bg-slate-100"
           validation={{ required: true }}
         />
 
         <Label
           name="body"
-          className="block mt-4 text-xs font-semibold text-gray-500 uppercase"
+          className=" mt-4 text-xs font-semibold text-gray-500 uppercase"
         >
           Comment
         </Label>
         <TextAreaField
           name="body"
-          className="block w-full p-1 border rounded h-24 text-sm"
+          className=" w-full p-1 border rounded h-24 text-sm bg-slate-100"
           validation={{ required: true }}
         />
 
         <Submit
           disabled={loading}
-          className="block mt-4 bg-blue-500 text-white text-xs font-semibold uppercase tracking-wide rounded px-3 py-2 disabled:opacity-50"
+          className=" mt-4 bg-red-500 text-white text-xs font-semibold uppercase tracking-wide rounded px-3 py-2 disabled:opacity-50"
         >
-          Submit
+          Send comment
         </Submit>
       </Form>
     </div>

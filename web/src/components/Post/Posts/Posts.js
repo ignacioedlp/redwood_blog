@@ -35,16 +35,15 @@ const PostsList = ({ posts }) => {
   }
 
   return (
-    <div className="rw-segment rw-table-wrapper-responsive">
+    <div className="rw-segment rw-table-wrapper-responsive max-w-screen-lg mx-auto">
       <table className="rw-table">
         <thead>
           <tr>
             <th>Id</th>
+            <th>Title</th>
+            <th>Published</th>
             <th>Created at</th>
             <th>Updated at</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Published</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -52,11 +51,10 @@ const PostsList = ({ posts }) => {
           {posts.map((post) => (
             <tr key={post.id}>
               <td>{truncate(post.id)}</td>
+              <td>{truncate(post.title)}</td>
+              <td>{checkboxInputTag(post.published)}</td>
               <td>{timeTag(post.createdAt)}</td>
               <td>{timeTag(post.updatedAt)}</td>
-              <td>{truncate(post.title)}</td>
-              <td>{truncate(post.content)}</td>
-              <td>{checkboxInputTag(post.published)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link
