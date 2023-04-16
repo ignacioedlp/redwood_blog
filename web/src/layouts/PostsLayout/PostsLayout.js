@@ -15,7 +15,7 @@ const PostsLayout = ({
   const { isAuthenticated, currentUser, logOut } = useAuth()
 
   return (
-    <div className="rw-scaffold">
+    <div className="rw-scaffold font-inter">
       <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
       <Navbar
         isAuthenticated={isAuthenticated}
@@ -24,12 +24,12 @@ const PostsLayout = ({
       />
       <header className="rw-header max-w-screen-xl mx-auto flex items-center">
         <h1 className="rw-heading rw-heading-primary">
-          <Link to={routes[titleTo]()} className="rw-link text-5xl font-bold">
+          <Link to={routes[titleTo]()} className="text-5xl font-bold text-black">
             {title}
           </Link>
         </h1>
-        <Link to={routes[buttonTo]()} className="rw-button rw-button-green h-1/2">
-          <div className="rw-button-icon">+</div> {buttonLabel}
+        <Link to={routes[buttonTo]()} className="rw-button bg-gradient-to-r from-[#A90058] to-[#FC714C] h-1/2 text-white ">
+          {buttonLabel}
         </Link>
       </header>
       <main className="rw-main">{children}</main>

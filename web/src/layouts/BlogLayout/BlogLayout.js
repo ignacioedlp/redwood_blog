@@ -18,7 +18,7 @@ const BlogLayout = ({ children }) => {
           logOut={logOut}
         />
       </header>
-      <main>{children}</main>
+      <main className='font-inter'>{children}</main>
       <Footer />
     </>
   )

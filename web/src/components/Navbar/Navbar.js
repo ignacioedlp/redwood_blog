@@ -21,9 +21,6 @@ const Navbar = ({ isAuthenticated, currentUser, logOut }) => {
             <nav aria-label="Site Nav" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm font-semibold">
                 <li>
-                  <Link to={routes.about()}>About</Link>
-                </li>
-                <li>
                   <Link to={routes.contact()}>Contact</Link>
                 </li>
                 <li>
