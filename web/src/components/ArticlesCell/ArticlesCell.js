@@ -7,6 +7,7 @@ export const QUERY = gql`
       id
       title
       content
+      createdAt
       user {
         name
         email
